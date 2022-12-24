@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITAL CLOCK</title>
+</head>
+<style>
+body{
+   align-items:center;
+   justify-content:center;
+   display:flex;
+    height:100vh;
+   width:100%;
+}
+div{
+   background-color:yellow;
+   height:300px;
+   width:300px;
+   border-radius:50%;
+   border:2px solid red;
+   align-items:center;
+   justify-content:center;
+   display:flex;
+   font-size:2rem;
+}
+#clocks{
+
+   }
+</style>
+<body>
+    <div id="clocks"></div>
+</body>
+<script>
+   function time(){
+    let date=new Date();
+	let    H=date.getHours();
+	let    m=date.getMinutes();
+	let    s=date.getSeconds();
+	let session="am";
+  
+	H=(H<10)?"0"+H:H;
+	m=(m<10)?"0"+m:m;
+	s=(s<10)?"0"+s:s;
+	
+	if(H==0){
+	   H==12;
+	}
+	if(H>12){
+	  H=H-12;
+	  session="pm"
+	}
+	let mani=H+":" +""+m+":" +""+s+""+session;
+	document.getElementById("clocks").innerText=mani;
+	setTimeout(time,1000)
+	}
+	time();
+</script>
+</html>
