@@ -4,12 +4,15 @@
 }
 .main-div{
     display: flex;
-    margin-top: 5rem;
+    margin-top: 1rem;
 }
 .content p{
-    color: burlywood;
+    color:#8f5849;
     font-size: 3rem;
-    font-weight: 500;
+    margin-left: 2rem;
+    font-family: 'Open Sans', sans-serif;
+}
+.img{
     margin-left: 2rem;
 }
 #email{
@@ -29,10 +32,27 @@
  margin-left: 2rem;
 }
 #log{
-    background-color: blue;
-    border-color: blue;
+    background-color:#0073b1;
+    border-color:#0073b1;
+    border:none;
     border-radius: 50px;
     color: aliceblue;
     width: 90%;
     font-size: 2rem;
+}
+.sidebar img{
+    width: 90%;
+    height: 80vh;
+    margin-left: 5rem;
+}
+
+#anker a{
+margin-top: 5rem;
+text-decoration: none;
+margin-left: 2rem;
+color: black;
+font-size: 20px;
+}
+#anker{
+    padding-top: 2rem;
 }

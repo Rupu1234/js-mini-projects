@@ -5,33 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"  href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <title>Log In Page</title>
 </head>
 <body>
     <section id="main">
       <div class="container">
+        <div class="img">
+          <img src="css/Linkedin.png" width="10%" alt="" srcset="">
+        </div>
+
         <div class="main-div">
+
           <div class="content">
             <p>Welcome to your<br> professional community</p>
+           
+          <form id="for" onsubmit="myfun()">
             <div id="mail">
             <input type="email" id="email" placeholder="Email" >
             </div>
-
+           
             <div id="word">
             <input type="password" id="pass" placeholder="password" >
-            </div>
+           </div>
             
-            <div>
-                <button id="log">Log In</button>
-            </div>
+           <div id="anker">
+            <a href="">Forget password?</a>
+           </div>
+           
+           <div>
+            <button id="log" >Log In</button>
+           </div>
+           </form>
           </div>
 
-          <div class="img">
-            <img src="css/linkedinssine in.jpg">
+          <div class="sidebar">
+            <img src="E:\js mini projects\js-mini-projects\log in page\css\dxf91zhqd2z6b0bwg85ktm5s4.svg" alt="" srcset="">
           </div>
-
         </div>
       </div>
     </section>
 </body>
+<script>
+    
+    let email=document.getElementById("Email")
+    let password=document.getElementById("password")
+    let button=document.getElementById("log")
+
+    function myfun(){
+      
+
+   if(email.value=="" && password.value==""){
+       alert("fill your form");
+   }
+  }
+
+</Script>
 </html>
