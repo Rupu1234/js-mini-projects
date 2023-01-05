@@ -15,12 +15,12 @@
           <img src="css/Linkedin.png" width="10%" alt="" srcset="">
         </div>
 
-        <div class="main-div">
 
+        <div class="main-div">
           <div class="content">
             <p>Welcome to your<br> professional community</p>
            
-          <form id="for" onsubmit="myfun()">
+          <form id="fill">
             <div id="mail">
             <input type="email" id="email" placeholder="Email" >
             </div>
@@ -34,8 +34,9 @@
            </div>
            
            <div>
-            <button id="log" >Log In</button>
+            <button id="log" type="submit" onclick="myfun()">Log In</button>
            </div>
+           
            </form>
           </div>
 
@@ -45,20 +46,76 @@
         </div>
       </div>
     </section>
-</body>
-<script>
-    
-    let email=document.getElementById("Email")
-    let password=document.getElementById("password")
-    let button=document.getElementById("log")
+<!---finish log in page-->
+  
+    <section id="sineup">
+     <div id="all">    
+      <form id="sine">
+        <h1>Create Your Account</h1>
 
-    function myfun(){
+        <label>Name:</label>
+        <input type="text" id="text1" placeholder="your Name">
+
+
+        <label>Age:</label>
+        <input type="text" id="age" placeholder="age">
+
+        <label>Email:</label>
+        <input type="email" id="email1" placeholder="your mail">
+
+        <label>Password</label>
+        <input type="password" id="password1" placeholder="password">
+
+       
+        <button type="submit"  id="sin">SIGN IN</button>
+      </form>
+      </div>
+    </section>
+
       
 
-   if(email.value=="" && password.value==""){
-       alert("fill your form");
-   }
-  }
 
+
+    <section id="success">
+         <h2 id="para" ></h2>
+    </section>
+
+</body>
+<script>
+
+  let obj=[{name:"Rupu",Age:22,Email:"rupu0812@email.com",Password:"rupu0812"},
+    {name:"vel",Age:26,Email:"vel0812@gmail.com",Password:"vel0812"},
+    {name:"pravin",Age:23,Email:"pravin0812@email.com",Password:"pravin0812"},
+    {name:"gopi",Age:23,Email:"gopi0812@email.com",Password:"gopi0812"},
+    {name:"madurai",Age:21,Email:"madurai0812@email.com",Password:"madurai0812"}]
+
+    document.getElementById("sineup").style.display="none"
+   let form=document.getElementById("fill")
+   form.addEventListener("submit",function(e){
+       e.preventDefault()
+       let mail=document.getElementById("email")
+       let psd=document.getElementById("pass")
+       
+       
+       obj.forEach((eve)=>{
+        if(mail.value == eve.Email && psd.value == eve.Password){
+        
+          document.getElementById("main").style.display="none"
+          document.getElementById("success").style.display="block"
+          document.getElementById("para").innerHTML="success full your form"
+          return false
+
+
+        }else{
+          
+        }
+       
+      })
+   
+    })
+      
+   
+   
+  
 </Script>
 </html>
